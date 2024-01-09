@@ -5,11 +5,115 @@
     font-family: 'Titillium Web', sans-serif;
 }
 
-$TrixxoGreen: #76B82A;
+$TrixxoGreen: #76b82a;
 $White: #FFFFFF;
 $Black: #000000;
+
+html {
+    background-color: rgb(211, 211, 211);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    width: 390px;
+    height: 844px;
+    background-color: $White;
+    margin: auto;
+}
 
 h1 {
     font-weight: 600;
     color: $TrixxoGreen;
+}
+
+button.primaryButton {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: $TrixxoGreen;
+    font-weight: 400;
+    font-size: 1.2rem;
+    a {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        text-decoration: none;
+        color: $White;
+    }
+}
+
+header {
+    width: 100%;
+    height: fit-content;
+    padding-top: 20px;
+    img {
+        height: 20px;
+        margin: 40px 0 0 40px;
+    }
+    p {
+        margin: 40px 0 0 40px;
+        font-weight: 600;
+        i {
+            margin-right: 5px;
+        }
+    }
+}
+
+main#home {
+    width: 100%;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    img#carIcon {
+        width: 240px;
+        margin: 50px 0;
+    }
+    div#idInput {
+        width: 100%;
+        margin-bottom: 50px;
+        label {
+            width: 100%;
+            color: $TrixxoGreen;
+        }
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid $Black;
+            padding: 5px;
+            font-size: 1rem;
+        }
+        input:focus {
+            outline: transparent !important;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    margin: 0 40px;
+    form {
+        width: 100%;
+        li {
+            list-style: none;
+            label {
+                color: $TrixxoGreen;
+            }
+            input {
+                border: none;
+                border-bottom: 1px solid $Black;
+                font-size: 1rem;
+            }
+            input:focus {
+                outline: transparent !important;
+            }
+        }    
+    }
 }
