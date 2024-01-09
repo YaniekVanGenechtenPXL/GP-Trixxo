@@ -57,9 +57,11 @@ header {
         height: 20px;
         margin: 40px 0 0 40px;
     }
-    p {
+    a {
         margin: 40px 0 0 40px;
         font-weight: 600;
+        color: $Black;
+        text-decoration: none;
         i {
             margin-right: 5px;
         }
@@ -96,7 +98,7 @@ main#home {
     }
 }
 
-main {
+main#inleveren {
     width: 100%;
     margin: 0 40px;
     form {

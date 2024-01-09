@@ -55,11 +55,13 @@ header img {
   height: 20px;
   margin: 40px 0 0 40px;
 }
-header p {
+header a {
   margin: 40px 0 0 40px;
   font-weight: 600;
+  color: #000000;
+  text-decoration: none;
 }
-header p i {
+header a i {
   margin-right: 5px;
 }
 
@@ -93,25 +95,25 @@ main#home div#idInput input:focus {
   outline: transparent !important;
 }
 
-main {
+main#inleveren {
   width: 100%;
   margin: 0 40px;
 }
-main form {
+main#inleveren form {
   width: 100%;
 }
-main form li {
+main#inleveren form li {
   list-style: none;
 }
-main form li label {
+main#inleveren form li label {
   color: #76b82a;
 }
-main form li input {
+main#inleveren form li input {
   border: none;
   border-bottom: 1px solid #000000;
   font-size: 1rem;
 }
-main form li input:focus {
+main#inleveren form li input:focus {
   outline: transparent !important;
 }
 
