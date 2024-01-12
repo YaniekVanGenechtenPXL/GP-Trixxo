@@ -16,17 +16,32 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 50px 0;
+    overflow-x: hidden;
 }
 body {
     width: 390px;
-    height: 844px;
-    background-color: $White;
     margin: auto;
+    background-color: $White;
 }
 
 h1 {
     font-weight: 600;
     color: $TrixxoGreen;
+}
+
+h2 {
+    font-weight: 600;
+    color: $TrixxoGreen;
+}
+
+h3 {
+    color: $Black;
+}
+
+div.whitespace {
+    width: calc(100% - 80px);
+    height: 50px;
 }
 
 button.primaryButton {
@@ -102,20 +117,143 @@ main#inleveren {
     width: 100%;
     margin: 0 40px;
     form {
-        width: 100%;
-        li {
-            list-style: none;
-            label {
-                color: $TrixxoGreen;
+        ul {
+            li {
+                width: calc(100% - 80px);
+                list-style: none;
+                display: flex;
+                margin: 2px 0;
+                label {
+                    color: $TrixxoGreen;
+                    width: 50%;
+                    font-size: 1.1rem;
+                }
+                input {
+                    width: 50%;
+                    border: none;
+                    border-bottom: 1px solid $Black;
+                    font-size: 1rem;
+                }
+                input:focus {
+                    outline: transparent !important;
+                }
             }
-            input {
-                border: none;
-                border-bottom: 1px solid $Black;
+        }
+        ul#inleveren__form__netheid {
+            li {
+                flex-direction: column;
+                margin-bottom: 25px;
+                div {
+                    width: 100%;
+                    padding: 0 5px;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    label {
+                        width: fit-content;
+                    }
+                }
+                input {
+                    border: none;
+                    appearance: none;
+                    -webkit-appearance: none;
+                    margin-right: 15px;
+                    width: 100%;
+                    height: 3px;
+                    background: $Black;
+                    border-radius: 3px;
+                    background-size: 70% 100%;
+                    background-repeat: no-repeat;
+                }
+                input::-webkit-slider-thumb {
+                    -webkit-appearance: none;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    background: $TrixxoGreen;
+                    cursor: ew-resize;
+                    box-shadow: 0 0 2px 0 #555;
+                }
+                input::-webkit-slider-runnable-track  {
+                    -webkit-appearance: none;
+                    box-shadow: none;
+                    border: none;
+                    background: transparent;
+                }
+            }
+        }
+        div#inleveren__form__schade {
+            div.schade {
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                background-color: $TrixxoGreen;
+                color: $White;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            div#schade__imgContainer {
+                position: relative;
+                img {
+                    width: calc(100% - 80px);
+                }
+                div#schade1 {
+                    position: absolute;
+                    top: 18px;
+                    left: 142px;
+                }
+            }
+            ul#schade__lijst {
+                li#schade__nieuw {
+                    list-style: none;
+                    color: $TrixxoGreen;
+                    width: 50%;
+                    font-size: 1.1rem;
+                    cursor: pointer;
+                    i {
+                        position: relative;
+                        top: 4px;
+                        margin-right: 5px;
+                    }
+                }
+                hr {
+                    width: calc(100% - 80px);
+                    height: 2px;
+                    border: 1px solid $TrixxoGreen;
+                    border-radius: 0.5px;
+                    margin: 10px 0;
+                }
+                li {
+                    width: calc(100% - 80px);
+                    font-size: 1.2rem;
+                    position: relative;
+                    div.schade {
+                        margin-right: 5px;
+                    }
+                    i {
+                        position: absolute;
+                        top: 4px;
+                        right: 0;
+                        color: $TrixxoGreen;
+                    }
+                }
+            }
+        }
+        div#opmerkingen {
+            textarea {
+                width: calc(100% - 80px);
+                padding: 5px;
+                border: 1px solid $TrixxoGreen;
                 font-size: 1rem;
             }
-            input:focus {
-                outline: transparent !important;
+            textarea#extraOpmInterieur {
+                margin-bottom: 20px;
             }
-        }    
+            textarea:focus {
+                border: 2px solid $TrixxoGreen;
+                outline: transparent;
+            }
+        }
     }
 }

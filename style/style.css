@@ -12,18 +12,33 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px 0;
+  overflow-x: hidden;
 }
 
 body {
   width: 390px;
-  height: 844px;
-  background-color: #FFFFFF;
   margin: auto;
+  background-color: #FFFFFF;
 }
 
 h1 {
   font-weight: 600;
   color: #76b82a;
+}
+
+h2 {
+  font-weight: 600;
+  color: #76b82a;
+}
+
+h3 {
+  color: #000000;
+}
+
+div.whitespace {
+  width: calc(100% - 80px);
+  height: 50px;
 }
 
 button.primaryButton {
@@ -99,22 +114,133 @@ main#inleveren {
   width: 100%;
   margin: 0 40px;
 }
-main#inleveren form {
-  width: 100%;
-}
-main#inleveren form li {
+main#inleveren form ul li {
+  width: calc(100% - 80px);
   list-style: none;
+  display: flex;
+  margin: 2px 0;
 }
-main#inleveren form li label {
+main#inleveren form ul li label {
   color: #76b82a;
+  width: 50%;
+  font-size: 1.1rem;
 }
-main#inleveren form li input {
+main#inleveren form ul li input {
+  width: 50%;
   border: none;
   border-bottom: 1px solid #000000;
   font-size: 1rem;
 }
-main#inleveren form li input:focus {
+main#inleveren form ul li input:focus {
   outline: transparent !important;
+}
+main#inleveren form ul#inleveren__form__netheid li {
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+main#inleveren form ul#inleveren__form__netheid li div {
+  width: 100%;
+  padding: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+main#inleveren form ul#inleveren__form__netheid li div label {
+  width: fit-content;
+}
+main#inleveren form ul#inleveren__form__netheid li input {
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 100%;
+  height: 3px;
+  background: #000000;
+  border-radius: 3px;
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+main#inleveren form ul#inleveren__form__netheid li input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #76b82a;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+}
+main#inleveren form ul#inleveren__form__netheid li input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+main#inleveren form div#inleveren__form__schade div.schade {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #76b82a;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main#inleveren form div#inleveren__form__schade div#schade__imgContainer {
+  position: relative;
+}
+main#inleveren form div#inleveren__form__schade div#schade__imgContainer img {
+  width: calc(100% - 80px);
+}
+main#inleveren form div#inleveren__form__schade div#schade__imgContainer div#schade1 {
+  position: absolute;
+  top: 18px;
+  left: 142px;
+}
+main#inleveren form div#inleveren__form__schade ul#schade__lijst li#schade__nieuw {
+  list-style: none;
+  color: #76b82a;
+  width: 50%;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+main#inleveren form div#inleveren__form__schade ul#schade__lijst li#schade__nieuw i {
+  position: relative;
+  top: 4px;
+  margin-right: 5px;
+}
+main#inleveren form div#inleveren__form__schade ul#schade__lijst hr {
+  width: calc(100% - 80px);
+  height: 2px;
+  border: 1px solid #76b82a;
+  border-radius: 0.5px;
+  margin: 10px 0;
+}
+main#inleveren form div#inleveren__form__schade ul#schade__lijst li {
+  width: calc(100% - 80px);
+  font-size: 1.2rem;
+  position: relative;
+}
+main#inleveren form div#inleveren__form__schade ul#schade__lijst li div.schade {
+  margin-right: 5px;
+}
+main#inleveren form div#inleveren__form__schade ul#schade__lijst li i {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  color: #76b82a;
+}
+main#inleveren form div#opmerkingen textarea {
+  width: calc(100% - 80px);
+  padding: 5px;
+  border: 1px solid #76b82a;
+  font-size: 1rem;
+}
+main#inleveren form div#opmerkingen textarea#extraOpmInterieur {
+  margin-bottom: 20px;
+}
+main#inleveren form div#opmerkingen textarea:focus {
+  border: 2px solid #76b82a;
+  outline: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */

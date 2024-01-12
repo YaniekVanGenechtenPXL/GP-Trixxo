@@ -19,7 +19,7 @@
     <main id="inleveren">
         <h1>Inleveringsformulier</h1>
         <form action="post" method="post">
-            <ul>
+            <ul id="inleveren__form__basicInfo">
                 <li>
                     <label for="werknemer">Werknemer:</label>
                     <input id="werknemer" type="text" value="Jan Janssens">
@@ -34,9 +34,61 @@
                 </li>
                 <li>
                     <label for="kilometerstand">Kilometerstand:</label>
-                    <input id="kilometerstand" type="text" value="">km
+                    <input id="kilometerstand" type="text" value="">
+                </li>
+                <li>
+                    <label for="datum">Datum:</label>
+                    <input id="datum" type="date">
                 </li>
             </ul>
+            <div class="whitespace"></div>
+            <ul id="inleveren__form__netheid">
+                <li>
+                    <label for="netheid__interieur">Netheid Interieur</label>
+                    <div>
+                        <label>1</label>
+                        <label>2</label>
+                        <label>3</label>
+                        <label>4</label>
+                        <label>5</label>
+                    </div>
+                    <input id="netheid__interieur" type="range" step="1" value="3" min="1" max="5">
+                </li>
+                <li>
+                    <label for="netheid__exterieur">Netheid Exterieur</label>
+                    <div>
+                        <label>1</label>
+                        <label>2</label>
+                        <label>3</label>
+                        <label>4</label>
+                        <label>5</label>
+                    </div>
+                    <input id="netheid__exterieur" type="range" step="1" value="3" min="1" max="5">
+                </li>
+            </ul>
+            <div class="whitespace"></div>
+            <div id="inleveren__form__schade">
+                <h2>Schade</h2>
+                <div id="schade__imgContainer">
+                    <img src="/assets/CarExp.png" alt="Explosion Photo Car">
+                    <div class="schade" id="schade1">1</div>
+                </div>
+                <ul id="schade__lijst">
+                    <li id="schade__nieuw"><i class="fa-solid fa-plus"></i>Nieuwe schade toevoegen</li>
+                    <hr>
+                    <li><div class="schade">1</div>Kleine kras<i class="fa-solid fa-file-circle-plus"></i></li>
+                </ul>
+            </div>
+            <div class="whitespace"></div>
+            <div id="opmerkingen">
+                <label for="extraOpmInterieur"><h2>Bijzondere Opmerkingen Interieur</h2></label>
+                <textarea name="extraOpmInterieur" id="extraOpmInterieur" cols="30" rows="7"></textarea>
+
+                <label for="extraOpmExterieur"><h2>Bijzondere Opmerkingen Exterieur</h2></label>
+                <textarea name="extraOpmExterieur" id="extraOpmExterieur" cols="30" rows="7"></textarea>
+            </div>
+            <div class="whitespace"></div>
+            <div class="whitespace"></div>
         </form>
     </main>
 </body>
