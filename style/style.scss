@@ -2,11 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Titillium Web", sans-serif;
 }
 
 $TrixxoGreen: #76b82a;
-$White: #FFFFFF;
+$White: #ffffff;
 $Black: #000000;
 
 html {
@@ -16,9 +16,8 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 50px 0;
-    overflow-x: hidden;
 }
+
 body {
     width: 390px;
     margin: auto;
@@ -33,6 +32,7 @@ h1 {
 h2 {
     font-weight: 600;
     color: $TrixxoGreen;
+    text-transform: capitalize;
 }
 
 h3 {
@@ -85,6 +85,7 @@ header {
 
 main#home {
     width: 100%;
+    height: 844px;
     padding: 0 40px;
     display: flex;
     align-items: center;
@@ -115,7 +116,8 @@ main#home {
 
 main#inleveren {
     width: 100%;
-    margin: 0 40px;
+    margin: 40px;
+    margin-top: 0;
     form {
         ul {
             li {
@@ -172,9 +174,9 @@ main#inleveren {
                     border-radius: 50%;
                     background: $TrixxoGreen;
                     cursor: ew-resize;
-                    box-shadow: 0 0 2px 0 #555;
+                    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
                 }
-                input::-webkit-slider-runnable-track  {
+                input::-webkit-slider-runnable-track {
                     -webkit-appearance: none;
                     box-shadow: none;
                     border: none;
@@ -240,7 +242,11 @@ main#inleveren {
                 }
             }
         }
-        div#opmerkingen {
+        div#opmerkingen,
+        div#extraOpmerkingen {
+            h2 {
+                font-size: 1.3rem;
+            }
             textarea {
                 width: calc(100% - 80px);
                 padding: 5px;
@@ -254,6 +260,54 @@ main#inleveren {
                 border: 2px solid $TrixxoGreen;
                 outline: transparent;
             }
+        }
+        div#benodigdheden {
+            ul {
+                li {
+                    list-style: none;
+                    display: flex;
+                    justify-content: flex-start;
+                    padding: 5px 0;
+                    width: calc(100% - 80px);
+                    input {
+                        accent-color: $TrixxoGreen;
+                        width: 25px;
+                        margin-right: 10px;
+                    }
+                    label {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
+        div#signatures {
+            div.signature {
+                margin-bottom: 20px;
+                canvas {
+                    width: calc(100% - 80px);
+                    border: 1px solid $TrixxoGreen;
+                    display: block;
+                    margin-bottom: 10px;
+                }
+                button {
+                    border: none;
+                    background-color: transparent;
+                    i {
+                        color: $TrixxoGreen;
+                        font-size: 1.5rem;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+        button[type="submit"] {
+            width: calc(100% - 80px);
+            height: 50px;
+            border: none;
+            background-color: $TrixxoGreen;
+            color: $White;
+            font-size: 1.5rem;
+            box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
         }
     }
 }

@@ -12,14 +12,12 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px 0;
-  overflow-x: hidden;
 }
 
 body {
   width: 390px;
   margin: auto;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 h1 {
@@ -30,6 +28,7 @@ h1 {
 h2 {
   font-weight: 600;
   color: #76b82a;
+  text-transform: capitalize;
 }
 
 h3 {
@@ -58,7 +57,7 @@ button.primaryButton a {
   top: 0;
   left: 0;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 header {
@@ -82,6 +81,7 @@ header a i {
 
 main#home {
   width: 100%;
+  height: 844px;
   padding: 0 40px;
   display: flex;
   align-items: center;
@@ -112,7 +112,8 @@ main#home div#idInput input:focus {
 
 main#inleveren {
   width: 100%;
-  margin: 0 40px;
+  margin: 40px;
+  margin-top: 0;
 }
 main#inleveren form ul li {
   width: calc(100% - 80px);
@@ -167,7 +168,7 @@ main#inleveren form ul#inleveren__form__netheid li input::-webkit-slider-thumb {
   border-radius: 50%;
   background: #76b82a;
   cursor: ew-resize;
-  box-shadow: 0 0 2px 0 #555;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 main#inleveren form ul#inleveren__form__netheid li input::-webkit-slider-runnable-track {
   -webkit-appearance: none;
@@ -180,7 +181,7 @@ main#inleveren form div#inleveren__form__schade div.schade {
   height: 25px;
   border-radius: 50%;
   background-color: #76b82a;
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,18 +230,67 @@ main#inleveren form div#inleveren__form__schade ul#schade__lijst li i {
   right: 0;
   color: #76b82a;
 }
-main#inleveren form div#opmerkingen textarea {
+main#inleveren form div#opmerkingen h2,
+main#inleveren form div#extraOpmerkingen h2 {
+  font-size: 1.3rem;
+}
+main#inleveren form div#opmerkingen textarea,
+main#inleveren form div#extraOpmerkingen textarea {
   width: calc(100% - 80px);
   padding: 5px;
   border: 1px solid #76b82a;
   font-size: 1rem;
 }
-main#inleveren form div#opmerkingen textarea#extraOpmInterieur {
+main#inleveren form div#opmerkingen textarea#extraOpmInterieur,
+main#inleveren form div#extraOpmerkingen textarea#extraOpmInterieur {
   margin-bottom: 20px;
 }
-main#inleveren form div#opmerkingen textarea:focus {
+main#inleveren form div#opmerkingen textarea:focus,
+main#inleveren form div#extraOpmerkingen textarea:focus {
   border: 2px solid #76b82a;
   outline: transparent;
+}
+main#inleveren form div#benodigdheden ul li {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 0;
+  width: calc(100% - 80px);
+}
+main#inleveren form div#benodigdheden ul li input {
+  accent-color: #76b82a;
+  width: 25px;
+  margin-right: 10px;
+}
+main#inleveren form div#benodigdheden ul li label {
+  font-size: 1.1rem;
+}
+main#inleveren form div#signatures div.signature {
+  margin-bottom: 20px;
+}
+main#inleveren form div#signatures div.signature canvas {
+  width: calc(100% - 80px);
+  border: 1px solid #76b82a;
+  display: block;
+  margin-bottom: 10px;
+}
+main#inleveren form div#signatures div.signature button {
+  border: none;
+  background-color: transparent;
+}
+main#inleveren form div#signatures div.signature button i {
+  color: #76b82a;
+  font-size: 1.5rem;
+  margin-right: 5px;
+}
+main#inleveren form button[type=submit] {
+  width: calc(100% - 80px);
+  height: 50px;
+  border: none;
+  background-color: #76b82a;
+  color: #ffffff;
+  font-size: 1.5rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 
 /*# sourceMappingURL=style.css.map */
