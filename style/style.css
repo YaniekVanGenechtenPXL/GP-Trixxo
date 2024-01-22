@@ -41,12 +41,14 @@ div.whitespace {
 }
 
 button.primaryButton {
-  width: 100%;
+  width: calc(100% - 80px);
   height: 50px;
   border: none;
   background-color: #76b82a;
+  color: #ffffff;
   font-weight: 400;
   font-size: 1.2rem;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
 }
 button.primaryButton a {
   width: 100%;
@@ -82,18 +84,16 @@ header a i {
 main#home {
   width: 100%;
   height: 844px;
-  padding: 0 40px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  margin: 40px;
+  margin-top: 0;
 }
 main#home img#carIcon {
-  width: 240px;
-  margin: 50px 0;
+  width: calc(100% - 80px);
 }
 main#home div#idInput {
-  width: 100%;
+  width: calc(100% - 80px);
   margin-bottom: 50px;
+  background-color: transparent;
 }
 main#home div#idInput label {
   width: 100%;
@@ -200,14 +200,22 @@ main#inleveren form div#inleveren__form__schade div#schade__imgContainer div#sch
 main#inleveren form div#inleveren__form__schade ul#schade__lijst li#schade__nieuw {
   list-style: none;
   color: #76b82a;
-  width: 50%;
+  width: calc(100% - 80px);
   font-size: 1.1rem;
   cursor: pointer;
 }
-main#inleveren form div#inleveren__form__schade ul#schade__lijst li#schade__nieuw i {
+main#inleveren form div#inleveren__form__schade ul#schade__lijst li#schade__nieuw a {
+  text-decoration: none;
+  color: #76b82a;
+}
+main#inleveren form div#inleveren__form__schade ul#schade__lijst li#schade__nieuw a i {
   position: relative;
-  top: 4px;
+  top: 0;
   margin-right: 5px;
+}
+main#inleveren form div#inleveren__form__schade ul#schade__lijst li.schade__li {
+  display: flex;
+  align-items: center;
 }
 main#inleveren form div#inleveren__form__schade ul#schade__lijst hr {
   width: calc(100% - 80px);
@@ -250,27 +258,51 @@ main#inleveren form div#extraOpmerkingen textarea:focus {
   border: 2px solid #76b82a;
   outline: transparent;
 }
-main#inleveren form div#benodigdheden ul li {
+main#inleveren form div#checklist ul li {
   list-style: none;
   display: flex;
   justify-content: flex-start;
   padding: 5px 0;
   width: calc(100% - 80px);
 }
-main#inleveren form div#benodigdheden ul li input {
+main#inleveren form div#checklist ul li input {
   accent-color: #76b82a;
   width: 25px;
   margin-right: 10px;
 }
-main#inleveren form div#benodigdheden ul li label {
+main#inleveren form div#checklist ul li label {
   font-size: 1.1rem;
+}
+main#inleveren form div#checklist ul li div#sleutels__count__container {
+  width: fit-content;
+  display: flex;
+  border: 2px solid #76b82a;
+}
+main#inleveren form div#checklist ul li div#sleutels__count__container div {
+  display: inline;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+main#inleveren form div#checklist ul li div#sleutels__count__container div.sleutels__button {
+  width: 25px;
+  height: 25px;
+  background-color: #76b82a;
+  color: #ffffff;
+  cursor: pointer;
 }
 main#inleveren form div#signatures div.signature {
   margin-bottom: 20px;
 }
+main#inleveren form div#signatures div.signature h2 {
+  color: #000000;
+}
 main#inleveren form div#signatures div.signature canvas {
   width: calc(100% - 80px);
-  border: 1px solid #76b82a;
+  border: 1px solid #000000;
   display: block;
   margin-bottom: 10px;
 }
@@ -283,14 +315,111 @@ main#inleveren form div#signatures div.signature button i {
   font-size: 1.5rem;
   margin-right: 5px;
 }
-main#inleveren form button[type=submit] {
+
+main#schade {
+  width: 100%;
+  margin: 40px;
+  margin-top: 0;
+}
+main#schade ul {
   width: calc(100% - 80px);
-  height: 50px;
-  border: none;
+}
+main#schade ul li {
+  list-style: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+main#schade ul li div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #76b82a;
+  padding: 5px 10px;
+}
+main#schade ul li div h2 {
+  color: #ffffff;
+}
+main#schade ul li div i {
+  font-size: 1.2rem;
+}
+main#schade ul li ul {
+  width: 100%;
+  background-color: #ffffff;
+}
+main#schade ul li ul li {
+  width: 100%;
+  padding: 5px 10px;
+  color: #76b82a;
+  display: flex;
+  align-items: center;
+  border: 1px solid #76b82a;
+  position: relative;
+}
+main#schade ul li ul li div.schade {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
   background-color: #76b82a;
   color: #ffffff;
-  font-size: 1.5rem;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main#schade ul li ul li p {
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+main#schade ul li ul li i {
+  position: absolute;
+  right: 10px;
+  color: #76b82a;
+}
+main#schade div#schade__imgContainer {
+  position: relative;
+}
+main#schade div#schade__imgContainer img {
+  width: calc(100% - 80px);
+}
+main#schade div#schade__imgContainer div#schade1 {
+  position: absolute;
+  top: 18px;
+  left: 142px;
+}
+main#schade div#schade__imgContainer div.schade {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #76b82a;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main#schade_aanduiden {
+  width: 100%;
+  height: 844px;
+  margin: 40px;
+  margin-top: 0;
+  position: relative;
+}
+main#schade_aanduiden h2 {
+  color: #000000;
+  font-weight: 400;
+}
+main#schade_aanduiden img {
+  width: calc(100% - 80px);
+}
+main#schade_aanduiden p {
+  width: calc(100% - 80px);
+  text-align: center;
+  color: #76b82a;
+  font-size: 1.2rem;
+}
+main#schade_aanduiden button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

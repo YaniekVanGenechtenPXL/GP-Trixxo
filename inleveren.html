@@ -7,15 +7,9 @@
         <link rel="icon" href="/assets/Icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap"
-            rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="/style/style.css" />
-        <script
-            src="https://kit.fontawesome.com/6a75991bc7.js"
-            crossorigin="anonymous"
-        ></script>
+        <script src="https://kit.fontawesome.com/6a75991bc7.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
         <script defer src="/script/main.js"></script>
         <script defer src="/script/SP.js"></script>
@@ -110,11 +104,10 @@
                     </div>
                     <ul id="schade__lijst">
                         <li id="schade__nieuw">
-                            <i class="fa-solid fa-plus"></i>Nieuwe schade
-                            toevoegen
+                            <a href="/schade.html"><i class="fa-solid fa-plus"></i>Nieuwe schade toevoegen</a>
                         </li>
                         <hr />
-                        <li>
+                        <li class="schade__li">
                             <div class="schade">1</div>
                             Kleine kras<i
                                 class="fa-solid fa-file-circle-plus"
@@ -145,12 +138,17 @@
                     ></textarea>
                 </div>
                 <div class="whitespace"></div>
-                <div id="benodigdheden">
+                <div id="checklist">
                     <h2>Aanwezige benodigdheden</h2>
                     <ul>
                         <li>
                             <input type="checkbox" id="sleutels" name="benodigdheden__list">
                             <label for="sleutels">Sleutels</label>
+                            <div id="sleutels__count__container">
+                                <div class="sleutels__button" id="sleutels__minus"><i class="fa-solid fa-minus"></i></div>
+                                <div id="sleutels__count"></div>
+                                <div class="sleutels__button" id="sleutels__plus"><i class="fa-solid fa-plus"></i></div>
+                            </div>
                         </li>
                         <li>
                             <input type="checkbox" id="tankkaart" name="benodigdheden__list">
@@ -259,7 +257,7 @@
 
                 <div class="whitespace"></div>
 
-                <button type="submit">Inleveren</button>
+                <button class="primaryButton" type="submit">Inleveren</button>
             </form>
         </main>
     </body>

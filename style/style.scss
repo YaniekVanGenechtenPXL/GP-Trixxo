@@ -45,12 +45,14 @@ div.whitespace {
 }
 
 button.primaryButton {
-    width: 100%;
+    width: calc(100% - 80px);
     height: 50px;
     border: none;
     background-color: $TrixxoGreen;
+    color: $White;
     font-weight: 400;
     font-size: 1.2rem;
+    box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
     a {
         width: 100%;
         height: 100%;
@@ -86,17 +88,15 @@ header {
 main#home {
     width: 100%;
     height: 844px;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    margin: 40px;
+    margin-top: 0;
     img#carIcon {
-        width: 240px;
-        margin: 50px 0;
+        width: calc(100% - 80px);
     }
     div#idInput {
-        width: 100%;
+        width: calc(100% - 80px);
         margin-bottom: 50px;
+        background-color: transparent;
         label {
             width: 100%;
             color: $TrixxoGreen;
@@ -210,14 +210,22 @@ main#inleveren {
                 li#schade__nieuw {
                     list-style: none;
                     color: $TrixxoGreen;
-                    width: 50%;
+                    width: calc(100% - 80px);
                     font-size: 1.1rem;
                     cursor: pointer;
-                    i {
-                        position: relative;
-                        top: 4px;
-                        margin-right: 5px;
+                    a {
+                        text-decoration: none;
+                        color: $TrixxoGreen;
+                        i {
+                            position: relative;
+                            top: 0;
+                            margin-right: 5px;
+                        }
                     }
+                }
+                li.schade__li {
+                    display: flex;
+                    align-items: center;
                 }
                 hr {
                     width: calc(100% - 80px);
@@ -261,7 +269,7 @@ main#inleveren {
                 outline: transparent;
             }
         }
-        div#benodigdheden {
+        div#checklist {
             ul {
                 li {
                     list-style: none;
@@ -277,15 +285,40 @@ main#inleveren {
                     label {
                         font-size: 1.1rem;
                     }
+
+                    div#sleutels__count__container {
+                        width: fit-content;
+                        display: flex;
+                        border: 2px solid $TrixxoGreen;
+                        div {
+                            display: inline;
+                            width: 25px;
+                            height: 25px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            user-select: none;
+                        }
+                        div.sleutels__button {
+                            width: 25px;
+                            height: 25px;
+                            background-color: $TrixxoGreen;
+                            color: $White;
+                            cursor: pointer;
+                        }
+                    }
                 }
             }
         }
         div#signatures {
             div.signature {
                 margin-bottom: 20px;
+                h2 {
+                    color: $Black;
+                }
                 canvas {
                     width: calc(100% - 80px);
-                    border: 1px solid $TrixxoGreen;
+                    border: 1px solid $Black;
                     display: block;
                     margin-bottom: 10px;
                 }
@@ -300,14 +333,112 @@ main#inleveren {
                 }
             }
         }
-        button[type="submit"] {
+    }
+}
+
+main#schade {
+    width: 100%;
+    margin: 40px;
+    margin-top: 0;
+    ul {
+        width: calc(100% - 80px);
+        li {
+            list-style: none;
+            color: $White;
+            margin-bottom: 10px;
+            div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background-color: $TrixxoGreen;
+                padding: 5px 10px;
+                h2 {
+                    color: $White;
+                }
+                i {
+                    font-size: 1.2rem;
+                }
+            }
+            ul {
+                width: 100%;
+                background-color: $White;
+                li {
+                    width: 100%;
+                    padding: 5px 10px;
+                    color: $TrixxoGreen;
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid $TrixxoGreen;
+                    position: relative;
+                    div.schade {
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        background-color: $TrixxoGreen;
+                        color: $White;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        margin-left: 10px;
+                    }
+                    i {
+                        position: absolute;
+                        right: 10px;
+                        color: $TrixxoGreen;
+                    }
+                }
+            }
+        }
+    }
+    div#schade__imgContainer {
+        position: relative;
+        img {
             width: calc(100% - 80px);
-            height: 50px;
-            border: none;
+        }
+        div#schade1 {
+            position: absolute;
+            top: 18px;
+            left: 142px;
+        }
+        div.schade {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
             background-color: $TrixxoGreen;
             color: $White;
-            font-size: 1.5rem;
-            box-shadow: 0px 3px 6px rgba($color: #000000, $alpha: 0.16);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
+    }
+}
+
+main#schade_aanduiden {
+    width: 100%;
+    height: 844px;
+    margin: 40px;
+    margin-top: 0;
+    position: relative;
+    h2 {
+        color: $Black;
+        font-weight: 400;
+    }
+    img {
+        width: calc(100% - 80px);
+    }
+    p {
+        width: calc(100% - 80px);
+        text-align: center;
+        color: $TrixxoGreen;
+        font-size: 1.2rem;
+    }
+
+    button {
+        position: absolute;
+        left: 0;
+        bottom: 0;
     }
 }
