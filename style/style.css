@@ -238,10 +238,6 @@ main#inleveren form div#inleveren__form__schade ul#schade__lijst li i {
   right: 0;
   color: #76b82a;
 }
-main#inleveren form div#opmerkingen h2,
-main#inleveren form div#extraOpmerkingen h2 {
-  font-size: 1.3rem;
-}
 main#inleveren form div#opmerkingen textarea,
 main#inleveren form div#extraOpmerkingen textarea {
   width: calc(100% - 80px);
