@@ -189,43 +189,57 @@ main#inleveren {
                 align-items: center;
             }
             div#schade__imgContainer {
-                position: relative;
-                img {
-                    width: 100%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 2.9fr 1fr;
+                grid-template-rows: 3;
+                margin-bottom: 10px;
+                div {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 5px;
                 }
-                div#schade1 {
-                    position: absolute;
-                    top: 18px;
-                    left: 142px;
+                div#car__rightside__container {
+                    grid-column: 2/3;
+                    grid-row: 1/2;
+                }
+                div#car__frontside__container {
+                    grid-column: 1/2;
+                    grid-row: 2/3;
+                }
+                div#car__topside__container {
+                    grid-column: 2/3;
+                    grid-row: 2/3;
+                }
+                div#car__backside__container {
+                    grid-column: 3/4;
+                    grid-row: 2/3;
+                }
+                div#car__leftside__container {
+                    grid-column: 2/3;
+                    grid-row: 3/4;
                 }
             }
-            ul#schade__lijst {
-                li#schade__nieuw {
-                    list-style: none;
-                    color: $TrixxoGreen;
-                    width: 100%;
-                    font-size: 1.1rem;
-                    cursor: pointer;
-                    a {
-                        text-decoration: none;
-                        color: $TrixxoGreen;
-                        i {
-                            position: relative;
-                            top: 0;
-                            margin-right: 5px;
-                        }
-                    }
+            hr {
+                width: 100%;
+                height: 2px;
+                border: 1px solid $TrixxoGreen;
+                border-radius: 0.5px;
+                margin: 10px 0;
+            }
+            p {
+                color: $TrixxoGreen;
+                i {
+                    margin-right: 5px;
                 }
+            }
+
+
+            ul#schade__lijst {
                 li.schade__li {
                     display: flex;
                     align-items: center;
-                }
-                hr {
-                    width: 100%;
-                    height: 2px;
-                    border: 1px solid $TrixxoGreen;
-                    border-radius: 0.5px;
-                    margin: 10px 0;
                 }
                 li {
                     width: 100%;
@@ -245,12 +259,14 @@ main#inleveren {
         }
         div#opmerkingen,
         div#extraOpmerkingen {
-            
             textarea {
                 width: 100%;
+                max-width: 100%;
+                height: 150px;
                 padding: 5px;
                 border: 1px solid $TrixxoGreen;
                 font-size: 1rem;
+                resize: none;
             }
             textarea#extraOpmInterieur {
                 margin-bottom: 20px;
@@ -319,7 +335,7 @@ main#inleveren {
                     i {
                         color: $TrixxoGreen;
                         font-size: 1.5rem;
-                        margin-right: 5px;
+                        margin-right: 20px;
                     }
                 }
             }

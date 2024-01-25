@@ -1,7 +1,9 @@
 <template>
   <div>
     <header>
-        <router-link to="/"><p><i class="fa-solid fa-chevron-left"></i>Terug</p></router-link>
+      <router-link style="text-decoration: none" to="/"
+        ><p><i class="fa-solid fa-chevron-left"></i>Terug</p></router-link
+      >
     </header>
     <main id="inleveren">
       <h1>Inleveringsformulier</h1>
@@ -25,7 +27,7 @@
           </li>
           <li>
             <label for="datum">Datum:</label>
-            <input id="datum" type="date" v-model="currentDate"/>
+            <input id="datum" type="date" v-model="currentDate" />
           </li>
         </ul>
         <div class="whitespace"></div>
@@ -39,7 +41,14 @@
               <label>4</label>
               <label>5</label>
             </div>
-            <input id="netheid__interieur" type="range" step="1" min="1" max="5" v-model="cleanlinessIn" />
+            <input
+              id="netheid__interieur"
+              type="range"
+              step="1"
+              min="1"
+              max="5"
+              v-model="cleanlinessIn"
+            />
           </li>
           <li>
             <label for="netheid__exterieur">Netheid Exterieur</label>
@@ -50,21 +59,39 @@
               <label>4</label>
               <label>5</label>
             </div>
-            <input id="netheid__exterieur" type="range" step="1" min="1" max="5" v-model="cleanlinessOut" />
+            <input
+              id="netheid__exterieur"
+              type="range"
+              step="1"
+              min="1"
+              max="5"
+              v-model="cleanlinessOut"
+            />
           </li>
         </ul>
         <div class="whitespace"></div>
         <div id="inleveren__form__schade">
           <h2>Schade</h2>
           <div id="schade__imgContainer">
-            <img src="../assets/CarExp.png" alt="Explosion Photo Car" />
-            <div class="schade" id="schade1">1</div>
+            <div id="car__rightside__container">
+              <img src="../assets/car/rightside.svg" alt="rightside" />
+            </div>
+            <div id="car__frontside__container">
+              <img src="../assets/car/frontside.svg" alt="frontside" />
+            </div>
+            <div id="car__topside__container">
+              <img src="../assets/car/topside.svg" alt="topside" />
+            </div>
+            <div id="car__backside__container">
+              <img src="../assets/car/backside.svg" alt="backside" />
+            </div>
+            <div id="car__leftside__container">
+              <img src="../assets/car/leftside.svg" alt="leftside" />
+            </div>
           </div>
+          <router-link style="text-decoration: none" to="/"><p><i class="fa-solid fa-plus"></i>Nieuwe schade toevoegen</p></router-link>
+          <hr />
           <ul id="schade__lijst">
-            <li id="schade__nieuw">
-              <a href="/schade.html"><i class="fa-solid fa-plus"></i>Nieuwe schade toevoegen</a>
-            </li>
-            <hr />
             <li class="schade__li">
               <div class="schade">1</div>
               Kleine kras<i class="fa-solid fa-file-circle-plus"></i>
@@ -74,7 +101,13 @@
         <div class="whitespace"></div>
         <div id="opmerkingen">
           <label for="extraOpmInterieur"><h2>Bijzondere Opmerkingen Interieur</h2></label>
-          <textarea name="extraOpmInterieur" id="extraOpmInterieur" cols="30" rows="7"></textarea>
+          <textarea
+            name="extraOpmInterieur"
+            cha
+            id="extraOpmInterieur"
+            cols="30"
+            rows="7"
+          ></textarea>
 
           <label for="extraOpmExterieur">
             <h2>Bijzondere Opmerkingen Exterieur</h2>
@@ -204,54 +237,54 @@
 </template>
 
 <script>
-import SignaturePad from 'signature_pad';
+import SignaturePad from 'signature_pad'
 
 export default {
-    data() {
-        return {
-            employerName: 'Jan Janssens',
-            carLP: '2-ABC-001',
-            carBrand: 'SEAT IBIZA',
-            mileage: 73297,
-            currentDate: null,
-            cleanlinessIn: 3,
-            cleanlinessOut: 3,
+  data() {
+    return {
+      employerName: 'Jan Janssens',
+      carLP: '2-ABC-001',
+      carBrand: 'SEAT IBIZA',
+      mileage: 73297,
+      currentDate: null,
+      cleanlinessIn: 3,
+      cleanlinessOut: 3,
 
-            employerSignaturePad: null,
-            userSignaturePad: null,
-        }
-    },
-    methods: {
-        undoEmployerSP() {
-            let data = this.employerSignaturePad.toData();
-            if (data) {
-                data.pop();
-                this.employerSignaturePad.fromData(data);
-            }
-        },
-        clearEmployerSP() {
-            this.employerSignaturePad.clear();
-        },
-        undoUserSP() {
-            let data = this.userSignaturePad.toData();
-            if (data) {
-                data.pop();
-                this.userSignaturePad.fromData(data);
-            }
-        },
-        clearUserSP() {
-            this.userSignaturePad.clear();
-        }
-    },
-    mounted() {
-        this.employerSignaturePad = new SignaturePad(this.$refs.employerSPCanvas);
-        this.userSignaturePad = new SignaturePad(this.$refs.userSPCanvas);
-
-        const currentDate = new Date()
-        const year = currentDate.getFullYear();
-        const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
-        const day = currentDate.getDate().toString().padStart(2, '0');
-        this.currentDate = `${year}-${month}-${day}`;
+      employerSignaturePad: null,
+      userSignaturePad: null
     }
+  },
+  methods: {
+    undoEmployerSP() {
+      let data = this.employerSignaturePad.toData()
+      if (data) {
+        data.pop()
+        this.employerSignaturePad.fromData(data)
+      }
+    },
+    clearEmployerSP() {
+      this.employerSignaturePad.clear()
+    },
+    undoUserSP() {
+      let data = this.userSignaturePad.toData()
+      if (data) {
+        data.pop()
+        this.userSignaturePad.fromData(data)
+      }
+    },
+    clearUserSP() {
+      this.userSignaturePad.clear()
+    }
+  },
+  mounted() {
+    this.employerSignaturePad = new SignaturePad(this.$refs.employerSPCanvas)
+    this.userSignaturePad = new SignaturePad(this.$refs.userSPCanvas)
+
+    const currentDate = new Date()
+    const year = currentDate.getFullYear()
+    const month = (currentDate.getMonth() + 1).toString().padStart(2, '0')
+    const day = currentDate.getDate().toString().padStart(2, '0')
+    this.currentDate = `${year}-${month}-${day}`
+  }
 }
 </script>

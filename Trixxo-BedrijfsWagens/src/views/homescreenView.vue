@@ -7,7 +7,7 @@
       <img id="carIcon" src="../assets/carIcon.png" alt="Car" />
       <div id="idInput">
         <label for="identification">E-mailadres:</label>
-        <input id="identification" type="email" />
+        <input id="identification" type="email"  autocomplete="off"/>
       </div>
       <button class="primaryButton" id="Button__Inleveren">
         <router-link to="/inleveren">Inleveren</router-link>
